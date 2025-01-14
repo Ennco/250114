@@ -3,7 +3,7 @@ var feedsContainer = document.querySelector(".feeds-container");
 var itemWidth = 220;
 var infoHeight = 32;
 
-let data;
+// let data;
 // const xhr = new XMLHttpRequest();
 // xhr.onreadystatechange = function () {
 //   console.log(xhr.readyState);
@@ -29,17 +29,18 @@ let data;
 //     main();
 //   });
 
-async function getList() {
-  const resp = await fetch(
-    "https://movie.douban.com/j/search_subjects?type=movie&tag=%E7%83%AD%E9%97%A8&page_limit=50&page_start=0"
-  );
-  const body = await resp.json();
-  return body;
-}
-getList().then((resp) => {
-  data = resp.subjects;
-  main();
-});
+// async function getList() {
+//   const resp = await fetch(
+//     "https://movie.douban.com/j/search_subjects?type=movie&tag=%E7%83%AD%E9%97%A8&page_limit=50&page_start=0"
+//   );
+//   const body = await resp.json();
+//   return body;
+// }
+// getList().then((resp) => {
+//   data = resp.subjects;
+//   main();
+// });
+main();
 function createItem() {
   for (var i = 0; i < data.length; i++) {
     var feedItem = document.createElement("div");
